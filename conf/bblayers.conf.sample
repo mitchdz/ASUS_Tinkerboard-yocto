@@ -13,4 +13,5 @@ BBLAYERS ?= " \
 	##OEROOT##/meta-arm/meta-arm-toolchain \
 	##OEROOT##/meta-python2 \
 	##OEROOT##/meta-openembedded/meta-oe \
+	##OEROOT##/meta-asus-tinkerboard-mitchdz \
 	"
