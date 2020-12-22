@@ -1,3 +1,28 @@
+# Build guide
+
+```bash
+git clone git://git.yoctoproject.org/poky -b gatesgarth
+
+cd poky
+
+git clone git://git.yoctoproject.org/meta-rockchip -b gatesgarth
+git clone git://git.yoctoproject.org/meta-arm -b gatesgarth
+git clone git://git.openembedded.org/meta-python2 -b gatesgarth
+git clone git://git.openembedded.org/meta-openembedded -b gatesgarth
+git clone https://github.com/mitchdz/meta-asus-tinkerboard-mitchdz
+
+cd ../
+
+mkdir -p build && cd build
+
+# use meta-asus-tinkerboard-mitchdz local.conf.sample and bblayers.conf.sample
+sed -i 's/poky/smes/g' ../asus-tinkerboard-mitchdz/.templateconf
+. ../poky/oe-init-build-env .
+
+bitbake core-image
+```
+
+
 # ASUS Tinker Board specifications summary
 
 ## Processor
